@@ -34,10 +34,12 @@ def main():
         start = int(move[1]) - 1
         end = int(move[2]) - 1
         cargo = containers[start][:amt]
-        cargo.reverse()
+        # following line toggles the difference between 
+        # exercises one and two.
+        # cargo.reverse()
         containers[end][0:0] = cargo
         del containers[start][:amt]
-    print(f'CONTAINERS: {containers}')
+    # print(f'CONTAINERS: {containers}')
 
     # print it
     outstr = ''
